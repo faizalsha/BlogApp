@@ -77,11 +77,11 @@ public class LoginActivity extends AppCompatActivity {
         String email = edtLoginEmail.getText().toString();
         String password = edtLoginPassword.getText().toString();
         if(!TextUtils.isEmpty(email) && !TextUtils.isEmpty(password)){
-
+            progressBar.setVisibility(View.VISIBLE);
             firebaseAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                 @Override
                 public void onComplete(@NonNull Task<AuthResult> task) {
-                    progressBar.setVisibility(View.VISIBLE);
+
                     if (task.isSuccessful()){
                         Toast.makeText(LoginActivity.this, "Signed In", Toast.LENGTH_SHORT).show();
                         sendToProfile();

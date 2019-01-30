@@ -7,6 +7,9 @@
         android:title="Search"
         app:showAsAction="always" />
     <item
+        android:id="@+id/item_profile"
+        android:title="Account Settings" />
+    <item
         android:id="@+id/item_log_out"
         android:title="Log Out" />
 </menu>

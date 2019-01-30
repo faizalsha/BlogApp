@@ -93,13 +93,13 @@ public class RegisterActivity extends AppCompatActivity {
                                 } else {
                                     Toast.makeText(RegisterActivity.this, "error:" + task.getException().getMessage(), Toast.LENGTH_LONG).show();
                                 }
+                                progressBar.setVisibility(View.INVISIBLE);
                             }
                         });
             }
         }else{
             Toast.makeText(this, "Error: Empty Fields", Toast.LENGTH_SHORT).show();
         }
-        progressBar.setVisibility(View.INVISIBLE);
     }
 
 
